@@ -25,12 +25,11 @@ public class partDlesson0610162025 {
         double total = subtotal - discountAmount;
 
         System.out.println();
-        System.out.println("Cougar Baking Company-");
+        System.out.println("Cougar Baking Company");
         System.out.println("Cookies: " + cookies);
         System.out.printf("Price each: $%.2f%n", pricePerCookie);
         System.out.printf("Subtotal: $%.2f%n", subtotal);
         System.out.printf("Discount: $%.2f%n", discountAmount);
-        System.out.println("------------------------------");
         System.out.printf("TOTAL: $%.2f%n", total);
 
         in.close();
