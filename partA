@@ -1,0 +1,14 @@
+public class parta 
+   double side = 2
+   double result = cubeVolume(side)
+   System.out.println(result)
+
+   side = 10
+   result = cubeVolume(side)
+   System.out.println(result)
+
+
+public static double cubeVolume(double sideLength)
+
+   double volume = sideLength * sideLength * sideLength
+   printd volume
