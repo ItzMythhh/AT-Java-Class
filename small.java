@@ -1,0 +1,20 @@
+public class small
+{
+   public static double smallest(double x, double y, double z)
+   {
+      double min = x;
+
+      if (y < min)
+         min = y;
+
+      if (z < min)
+         min = z;
+
+      return min;
+   }
+
+   public static void main(String[] args)
+   {
+      System.out.println(smallest(3.5, 2.1, 4.8));
+   }
+}
