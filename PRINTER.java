@@ -7,9 +7,9 @@ public class PRINTER {
         Scanner input = new Scanner(new File("customers.txt"));
         input.useDelimiter("[,\\s\\n]+");
 
-        System.out.println("---------------------------------------");
+        System.out.println("--------------------------------------");
         System.out.println("ID Name Balance");
-        System.out.println("---------------------------------------");
+        System.out.println("-------------------------------------");
 
         while (input.hasNext()) {
             int id = input.nextInt();
