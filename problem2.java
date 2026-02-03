@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+        import java.util.ArrayList;
 import java.util.Scanner;
 
 public class problem2 {
@@ -15,17 +15,17 @@ public class problem2 {
             }
 
             scores.add(Double.parseDouble(input));
-        }
+    }
 
         System.out.println("------------------");
 
         double sum = 0;
         for (int i = 0; i < scores.size(); i++) {
             System.out.printf("%.2f%n", scores.get(i));
-            sum += scores.get(i);
-        }
+            sum += scores.get(i)
+                }
 
-        System.out.println("----------------");
+        System.out.println("---------------");
 
         double avg = sum / scores.size();
         System.out.printf("avg = %.2f%n", avg);
