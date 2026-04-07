@@ -1,29 +1,15 @@
-import java.util.Scanner;
-import mow.Yard;
+Mower mower = new Mower();
+mower.setVerticalPos(1);
+mower.setHorizontalPos(1);
+mower.setDirection(1); // facing right
 
-public class YardDemo {
+while (mower.getHorizontalPos() < yard.getWidth()) {
+    Yard.clearScreen();
 
-    public static void clearScreen() {
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
-    }
+    mower.mowSpace(yard);
+    yard.printLawn(mower);
 
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+    delay(500);
 
-        clearScreen();
-
-        System.out.print("Enter the height of the yard: ");
-        int height = input.nextInt();
-
-        System.out.print("Enter the width of the yard: ");
-        int width = input.nextInt();
-
-        System.out.println();
-
-        Yard yard = new Yard(height, width);
-        yard.printYard();
-
-        input.close();
-    }
+    mower.moveMower();
 }
