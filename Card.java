@@ -1,4 +1,4 @@
-public class gambleplz {
+public class Card {
 
     public enum Suit {
         SPADE, HEART, CLUB, DIAMOND
