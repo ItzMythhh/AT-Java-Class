@@ -4,36 +4,38 @@ import Mow.Mower;
 
 public class YardDemo {
 
-    public static void delay(long mseconds) {
+    public static void delay(long milliseconds) {
         try {
-            Thread.sleep(mseconds);
+            Thread.sleep(milliseconds);
         } catch (InterruptedException e) {
-            System.err.println("InterruptedException received!");
+            System.out.println("Interrupted");
         }
     }
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Enter the height of the yard: ");
+        System.out.print("Enter the height of the lawn: ");
         int height = input.nextInt();
 
-        System.out.print("Enter the width of the yard: ");
+        System.out.print("Enter the width of the lawn: ");
         int width = input.nextInt();
 
         Yard yard = new Yard(height, width);
-
         Mower mower = new Mower();
-        mower.setVerticalPos(1);
-        mower.setHorizontalPos(1);
-        mower.setDirection(1);
 
-        while (mower.getHorizontalPos() <= yard.getWidth()) {
-            Yard.clearScreen();
+        mower.randomize(yard);
+        mower.mowSpace(yard);
+
+        Yard.clearScreen();
+        yard.printLawn(mower);
+        delay(300);
+
+        while (mower.updateMower(yard)) {
             mower.mowSpace(yard);
+            Yard.clearScreen();
             yard.printLawn(mower);
-            delay(500);
-            mower.moveMower();
+            delay(300);
         }
 
         input.close();
